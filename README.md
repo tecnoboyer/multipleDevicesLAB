@@ -26,14 +26,21 @@ yarn start
 With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
 
 ### Android
+## Connecting device
+## adb connect 192.168.2.46:5555  + accept in the screen
+## adb reverse tcp:8081 tcp:8081   
+## adb devices to check is connected  
 
-```sh
-# Using npm
-npm run android
 
-# OR using Yarn
-yarn android
-```
+## TO RUN IN THE FIRE OS STICK
+## cd android
+## ./gradlew assembleDebug
+## Now install to the device 
+## adb install android/app/build/outputs/apk/debug/app-debug.apk
+## back in the server, cd .. + npm run android
+
+## Unistalling the apk
+# adb uninstall com.multipledeviceslab
 
 ### iOS
 
